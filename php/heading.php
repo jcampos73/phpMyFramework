@@ -109,7 +109,7 @@ $filename_new = $array_new[$filename];
 //}
 
 //Prepare path
-$file_path = "<a href=\"" . $filename . prepareParam($filename)  . "\">" . $array_title[$filename] . "</a>";
+$file_path = "<a href=\"" . $filename . prepareParam($filename)  . "\" style=\"font-size: 1.2em;\">" . "<b>" . $array_title[$filename] . "</b>" . "</a>";
 
 $file_path_part = $filename_back;
 
@@ -126,6 +126,10 @@ $heading_begin="
   	<td colspan=\"3\" rowspan=\"2\" align=\"left\"><a href=\"http://" . $_SERVER["HTTP_HOST"] . dirname($_SERVER["PHP_SELF"]) . "\"/><img src=\"images/mylogo.png\" alt=\"mylogo\" height=\"100px\"/></a></td>
   </tr>
 ";
+
+$sel_1=($filename=="index.php" ? "selected" : "");
+$sel_2=($filename=="producto.php" ? "selected" : "");
+$sel_3=($filename=="productos.php" ? "selected" : "");
 
 $heading_end="
   <!--
@@ -160,13 +164,13 @@ $heading_end="
 <div id=\"nav\">
 <ul>
 	<li id=\"inicio\" class=\"ini\">
-	<a class=\"selected\" href=\"index.php\">Inicio</a>
+	<a class=\"" . $sel_1 . "\" href=\"index.php\">Inicio</a>
 	</li>
 	<li id=\"insertar\" class=\"\">
-	<a class=\"\" href=\"producto.php\">Insertar veh&iacute;culo</a>
+	<a class=\"" . $sel_2 . "\" href=\"producto.php\">Insertar veh&iacute;culo</a>
 	</li>
 	<li id=\"listado\" class=\"\">
-	<a class=\"\" href=\"productos.php\">Listado de veh&iacute;culos</a>
+	<a class=\"" . $sel_3 . "\" href=\"productos.php\">Listado de veh&iacute;culos</a>
 	</li>
 </ul>
 </div>
