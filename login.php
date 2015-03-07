@@ -48,15 +48,15 @@ if (isset($_POST['usuario'])) {
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
-<LINK href="css/interactiva.css" rel="stylesheet" type="text/css">
+<meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+<link href="css/interactiva.css" rel="stylesheet" type="text/css" />
 <title>login</title>
 </head>
 
 <body>
 <div id="vbod">
 <div id="page_margins">
-<form action="<?php echo $loginFormAction; ?>" method="POST" name="form1">
+<form action="<?php echo $loginFormAction; ?>" method="post" name="form1">
 <!--Filter-->
 <table border="0" align="center">
   <tr>
